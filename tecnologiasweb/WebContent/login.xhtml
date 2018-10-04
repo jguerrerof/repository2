@@ -175,7 +175,10 @@ var TODAY = monthname[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear()
   				 </p:row>
   				 <p:row>
   						 <p:column >
-   						 asdasdasd
+   						<p:inputText value="#{loginBean.nombreUsuario}" id="username" label="Usuario de ingreso al sistema" />
+             
+ 
+				    
             			</p:column>			
   				  </p:row> 
   				    <p:row> 
@@ -185,8 +188,8 @@ var TODAY = monthname[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear()
   				  </p:row>
   				  <p:row>
   				 <p:column >
-  				 asdasdas
-  				 	</p:column>			
+  				 	<p:password id="pwd2" value="#{loginBean.passWeb}" label="Clave de ingreso al sistema" />
+            		</p:column>			
   				  </p:row>
   				  
   				   <p:row>
@@ -201,7 +204,9 @@ var TODAY = monthname[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear()
         	   <p:row>
             <p:column >
              <div align="center">
-          				 asdaasdas  						
+          				 
+          				 <p:commandButton value="Ingreso al sistema " action="#{loginBean.login}" id="withIcon" icon="ui-icon-disk" update="message" /> 
+          				           						
             </div>
             </p:column>
         </p:row>

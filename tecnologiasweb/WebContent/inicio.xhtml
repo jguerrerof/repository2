@@ -60,7 +60,7 @@
     
     <p:layoutUnit position="north">
          <h:panelGrid columns="1" cellpadding="0">            
-               <p:graphicImage name="../images/header06.jpeg" />          
+               <p:graphicImage name="../images/web-banner-01.jpg" width="1300" height="120"  />          
             </h:panelGrid>
     </p:layoutUnit>
   
@@ -104,37 +104,37 @@
         	
         	<p:commandButton value="Edit" icon="fa fa-fw fa-facebook-square" type="button"/>
             <p:inputText style="margin-right:10px" placeholder="Search"/>
-            <p:commandButton type="button" value="Logout" icon="ui-icon-extlink" />
+            <p:commandButton type="button" value="Login" icon="ui-icon-extlink" />
         </f:facet>
     </p:menubar>
   
-    <p:carousel autoPlayInterval="3000" numVisible="1" effect="easeInStrong" headerText="">
+    <p:carousel autoPlayInterval="6000" itemStyle="height:320px;text-align:center" responsive="true" numVisible="1" circular="true" >
         <p:tab title="Curso 1">
             <h:panelGrid columns="1" cellpadding="10">            
-               <p:graphicImage name="../images/img1.png" width="650" height="450" />             
+              <p:graphicImage name="../images/img1.jpg"   />     
             </h:panelGrid>
         </p:tab>
         <p:tab title="Curso 2">
             <h:panelGrid columns="1" cellpadding="10"> 
-                  <p:graphicImage name="../images/img2.png" width="650" height="450" />  
+                  <p:graphicImage name="../images/img2.jpg"   />   
             </h:panelGrid>
         </p:tab>
       	<p:tab title="Curso 3">
             <h:panelGrid columns="1" cellpadding="10">
-                  <p:graphicImage name="../images/img3.jpeg" width="650" height="450" />  
+                  <p:graphicImage name="../images/img1.jpg"   />  
             </h:panelGrid>
         </p:tab>
         <p:tab title="Curso 3">
             <h:panelGrid columns="1" cellpadding="10">
-                  <p:graphicImage name="../images/img4.jpeg" width="650" height="450" />  
+                  <p:graphicImage name="../images/img2.jpg" />  
             </h:panelGrid>
-        </p:tab>
+        </p:tab> 
     </p:carousel>
     
-    <p:panel id="basic" header="Basic" footer="Detalles..." style="margin-bottom:20px">
+    <p:panel id="basic" style="margin-bottom:2px">
         <h:panelGrid columns="2" cellpadding="10">
            
- <p:gmap center="36.890257,30.707417" zoom="13" type="HYBRID" style="width:600px;height:400px" model="#{markersView.simpleModel}" />
+ <p:gmap center="-2.171585, -79.929716" zoom="10" type="HYBRID" style="width:600px;height:400px" model="#{markersView.simpleModel}" />
  
  <p:media value="https://www.youtube.com/v/E3U0mYAbPao&amp;hl=en&amp;fs=1&amp;" width="600" height="400" player="flash"/>
  
