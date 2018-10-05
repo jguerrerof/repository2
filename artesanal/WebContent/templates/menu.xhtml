@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+
+<ui:composition 
+    xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html" 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	 >
+ 
+<p:panel  style="height:52px;">  
+   				         
+   				       
+   				     <style>
+	.menubar {
+	  background-color: lightblue;
+	}
+		
+</style>
+   				       
+   				        <div align="center" > 
+   				        
+   				         <p:menubar styleClass="menubar">
+        <p:submenu label="Inicio" icon="ui-icon-document">
+            <p:submenu label="New" icon="ui-icon-contact">
+                <p:menuitem value="Project" url="#" />
+                <p:menuitem value="Other" url="#" />
+            </p:submenu>
+            <p:menuitem value="Open" url="#" />
+            <p:separator />
+            <p:menuitem value="Quit" url="#" />
+        </p:submenu>
+ 
+        <p:submenu label="Productos" icon="ui-icon-help">
+            <p:menuitem value="Contents" url="#" />
+            <p:submenu label="Search" icon="ui-icon-search">
+                <p:submenu label="Text">
+                    <p:menuitem value="Workspace" url="#" />
+                </p:submenu>
+                <p:menuitem value="File" url="#" />
+            </p:submenu>
+        </p:submenu>
+ 
+        <p:submenu label="Servicios" icon="ui-icon-gear">
+            
+        </p:submenu>
+        
+        <p:submenu label="Quienes Somos" icon="ui-icon-pencil">
+            <p:menuitem value="Undo" url="#" icon="ui-icon-arrowreturnthick-1-w" />
+            <p:menuitem value="Redo" url="#" icon="ui-icon-arrowreturnthick-1-e" />
+        </p:submenu>
+        
+        <p:menuitem value="Blog" url="http://www.primefaces.org" icon="ui-icon-pencil" />
+ 
+        <p:menuitem value="Quit" url="http://www.primefaces.org" icon="ui-icon-close" />
+        
+        
+ 
+        <f:facet name="options">
+        	
+        	                    
+             <p:commandButton value="Ingreso al sistema " action="#{loginBean.loginpantalla}" id="withIcon" icon="ui-icon-disk" /> 
+          				  
+          				  
+        </f:facet>
+    </p:menubar>
+    
+   				            
+   				      
+
+</div>
+   				     </p:panel> 
+     
+</ui:composition>
+ 
+        
+ 

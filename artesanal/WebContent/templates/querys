@@ -1,0 +1,34 @@
+
+// docentes que no tiene activo ninguna materia (inactivarlos)
+
+
+select distinct(sgu.id),u.nombres,u.apellidos,u.identificacion,sgu.is_active,sgu.username from sf_guard_user sgu, sf_guard_user_permission p,usuario u
+--select * from sf_guard_user sgu, sf_guard_user_permission p,usuario u
+where sgu.id=p.user_id
+and p.permission_id in (3)
+and sgu.is_active=true
+and u.sf_guard_user_id=sgu.id
+and u.sf_guard_user_id=p.user_id
+and u.id not in (
+select distinct(pp.profesor_id)
+ from paralelo_profesor pp where pp.paralelo_id in 
+(
+select distinct(paralelo_id)
+from 
+paralelo_alumno
+where   
+paralelo_id in (
+select distinct(p1.id) 
+from paralelo_alumno pa1,paralelo p1
+where pa1.paralelo_id=p1.id
+and p1.periodo_id in
+(
+    select id from periodo pe1 where
+    pe1.numero='1' and
+     pe1.anio_id in (select a.id from anio a where a.anio='2016')
+--     and pe1.facultad_id=31
+	 and pe1.tipo_periodo_id in (select id from tipo_periodo tp where tp.tipo='Semestral')
+)
+)
+)
+)

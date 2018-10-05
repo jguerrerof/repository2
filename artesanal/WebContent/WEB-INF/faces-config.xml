@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+    version="2.2">
+    
+                                                       
+	<managed-bean>
+		<managed-bean-name>loginBean</managed-bean-name>
+		<managed-bean-class>main.java.controllers.loginBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope> 
+	</managed-bean> 
+	
+	  <managed-bean>
+		<managed-bean-name>menuView</managed-bean-name>
+		<managed-bean-class>main.java.controllers.MenuView</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope> 
+	</managed-bean> 
+
+
+    <managed-bean>
+		<managed-bean-name>AddMarkersView</managed-bean-name>
+		<managed-bean-class>org.primefaces.showcase.view.data.gmap.AddMarkersView</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope> 
+	</managed-bean> 
+	
+	<managed-bean>
+		<managed-bean-name>markersView</managed-bean-name>
+		<managed-bean-class>org.primefaces.showcase.view.data.gmap.MarkersView</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope> 
+	</managed-bean>   
+    
+    
+</faces-config>
