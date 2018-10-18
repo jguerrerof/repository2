@@ -1,6 +1,9 @@
 package main.java.controllers;
 
+import java.io.EOFException;
+import java.io.IOException;
 import java.io.Serializable;
+
 
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
@@ -22,6 +25,8 @@ import org.primefaces.model.DefaultDashboardModel;
 public class DashboardView implements Serializable {
      
     private DashboardModel model;
+    private String option;
+ 
      
     @PostConstruct
     public void init() {
@@ -41,7 +46,51 @@ public class DashboardView implements Serializable {
         model.addColumn(column1);
         model.addColumn(column2);
         
+		
+		System.out.println("init- en dashborad ABC--->");
+		
+		 
+		if(FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("loginBean")!=null)
+			{
+				
+				System.out.println("1a"); 
+				loginBean loginBean = (loginBean)FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("loginBean");	
+				System.out.println("1b"); 
+				
+				
+				boolean ok=loginBean.isAuthCorrecta();
+				System.out.println("1c"); 
+				if(ok){
+					
+					System.out.println("1d"); 
+					
+					
+					
+					}
+				else
+				{
+					System.out.println("error login en rol 1e");	
+					 try {
+							FacesContext.getCurrentInstance().getExternalContext().redirect("login.xhtml");
+							 	} catch (Exception e1) {
+							// TODO Auto-generated catch block
+							 e1.printStackTrace();
+						}
+					}
+		
     }
+	else{
+		
+		 
+		
+	}		
+	
+	
+    }
+       
+    
+
+ 
      
     public void handleReorder(DashboardReorderEvent event) {
         FacesMessage message = new FacesMessage();
@@ -71,6 +120,17 @@ public class DashboardView implements Serializable {
     public DashboardModel getModel() {
         return model;
     }
+    
+    
+
+    public String getOption() {
+        return option;
+    }
+ 
+    public void setOption(String option) {
+        this.option = option;
+    } 
+    
 }
 
  

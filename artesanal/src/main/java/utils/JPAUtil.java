@@ -3,6 +3,8 @@ package main.java.utils;
 import java.io.IOException;
 
 
+
+
 import javax.faces.context.FacesContext;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -10,9 +12,14 @@ import javax.persistence.Persistence;
 
 public class JPAUtil { 
 	 
-	private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("usuarios");
+	 EntityManagerFactory emf =
+			 Persistence.createEntityManagerFactory("persistenceUnitName");
+	 
+//	private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("JPAService");
     //public static EntityManagerFactory emf2 = Persistence.createEntityManagerFactory("dos");
 /*
+ * 
+ * 
  public EntityManager getEntityManager(String prueba) {
 	 
 	 EntityManager entidad=null; 
@@ -33,13 +40,13 @@ public class JPAUtil {
 	  EntityManager a=null;
 	  try{
 		  
-		//  System.out.println("EN GETENTITYMANAGER1");
+		  System.out.println("EN GETENTITYMANAGER1");
 		  
-		  //System.out.println("EN GETENTITYMANAGER2"+emf);
+		  System.out.println("EN GETENTITYMANAGER2"+emf.getProperties());
 		  
 		  a=emf.createEntityManager();  
 		  
-		//  System.out.println("EN GETENTITYMANAGER3"); 
+		   System.out.println("EN GETENTITYMANAGER3"); 
 		      
   }catch (Exception e) {
 		//  System.out.println("error de conexiónabc- 2016 --!!!!."+e.toString());     

@@ -1,7 +1,9 @@
 package main.java.controllers;
  
  
+
 import java.sql.Connection;
+
 
 
 
@@ -165,9 +167,15 @@ public class loginBean {
 				 				    	
 			    	ActiveDirectoryAuthentication authentication = new ActiveDirectoryAuthentication(activedirectory);//10.2.0.2//OU=oulaica,DC=local,DC=ulvr,DC=edu,DC=ec 
 			        boolean authResult = authentication.authenticate(username, pass);*/
+			    	boolean continuar=false;
+			    	
+			    	if(username.equals("admin") && pass.equals("root")){
+			    		continuar=true;
+			    	}
+			    	
 			        
-			        if(true){
-			        	link= "dashboard?faces-redirect=true";	
+			        if(continuar){
+			        	link= "dashboardsucursal?faces-redirect=true";	
 			        	admisionActivos=0;
 			        	admisionActivosStr="Roles (0)";
 			        	 setAuthCorrecta(true);
@@ -453,7 +461,7 @@ public class loginBean {
 	 
 	
 	public String inicioSistema() {	
-		System.out.println("inicio del sistema");
+		System.out.println("inicio del sistema CLICK ");
 		/*if(FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("loginBean")!=null)
     		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("loginBean",null);	
 		*/
@@ -461,9 +469,16 @@ public class loginBean {
 		setPassWeb("");
 		
 		//return "inicio";
-		return "inicio?faces-redirect=true";
+		return "ini?faces-redirect=true";
 	}
 	 
+
+
+	 
+	 
+	 
+	
+	
 	
 	
 	 
@@ -586,13 +601,13 @@ public class loginBean {
 		if(FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("loginBean")!=null)
     		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("loginBean",null);
 		
-		
-		if(FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("usuarioView")!=null)
-    		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("usuarioView",null);
-
-		
+		 		
 		if(FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("rolesView")!=null)
     		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("rolesView",null);
+
+		
+		if(FacesContext.getCurrentInstance().getExternalContext().getSessionMap().get("dashboardView")!=null)
+    		FacesContext.getCurrentInstance().getExternalContext().getSessionMap().put("dashboardView",null);
 
 		 
 		FacesContext context = FacesContext.getCurrentInstance();
@@ -600,7 +615,7 @@ public class loginBean {
 	    
 	    request.getSession().invalidate();
 		
-		return "login?faces-redirect=true";
+		return "ini?faces-redirect=true";
 	}
 	
 	public String iniciar() {	

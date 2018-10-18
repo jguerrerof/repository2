@@ -57,12 +57,10 @@
  	<style type="text/css">	 
 
 .tituloreporteanio1{ 
-	font-size: 10pt;
-	font-weight: bold;
+	font-size: 6pt;
 	color: white; 
 	text-align: center;
-	line-height: 15pt;	
-	height: 200px;
+	line-height: 8pt
 }      		 
  	
  .ui-panel-titlebar {
@@ -107,27 +105,23 @@ font-family: verdana;
   
      <ui:include src="templates/menu.xhtml"></ui:include>   	
   
-    <p:carousel autoPlayInterval="6000" headerStyle="myPanelStyle myPanelStyleTitle" itemStyle="height:320px;text-align:center" responsive="true" numVisible="1" circular="true" >
+    <p:carousel autoPlayInterval="6000" headerStyle="myPanelStyle myPanelStyleTitle" itemStyle="height:420px;text-align:center" responsive="true" numVisible="1" circular="true" >
         <p:tab title="Curso 1">
             <h:panelGrid columns="1" cellpadding="10">            
-              <p:graphicImage name="../images/img1.jpg"   />     
+              <p:graphicImage name="../images/img1.jpeg"   />     
             </h:panelGrid>
         </p:tab>
         <p:tab title="Curso 2">
             <h:panelGrid columns="1" cellpadding="10"> 
-                  <p:graphicImage name="../images/img2.jpg"   />   
+                  <p:graphicImage name="../images/img2.jpeg"   />   
             </h:panelGrid>
         </p:tab>
       	<p:tab title="Curso 3">
             <h:panelGrid columns="1" cellpadding="10">
-                  <p:graphicImage name="../images/img1.jpg"   />  
+                  <p:graphicImage name="../images/img3.jpeg"   />  
             </h:panelGrid>
         </p:tab>
-        <p:tab title="Curso 3">
-            <h:panelGrid columns="1" cellpadding="10">
-                  <p:graphicImage name="../images/img2.jpg" />  
-            </h:panelGrid>
-        </p:tab> 
+        
     </p:carousel>
     
     <p:panel id="basic" style="margin-bottom:2px">
@@ -149,13 +143,13 @@ font-family: verdana;
     
     <p:layoutUnit position="south" size="90">
          
-<p:panelGrid columns="3" layout="grid">            
+<p:panelGrid columns="3" layout="grid" styleClass="tituloreporteanio1">            
     <h:outputText value="Quizás te interese.."  style="font-weight:bold" /> 
-    <h:outputText value="CONTACTOS" style="font-weight:bold"/> 
-    <h:outputText value="NOSOTROS" style="font-weight:bold" /> 
+    <h:outputText value="Contactos" style="font-weight:bold"/> 
+    <h:outputText value="Nosotros" style="font-weight:bold" /> 
     
     <h:outputText value="Formas de pago" /> 
-     <h:outputText value="(593)1212121212" /> 
+     <h:outputText value="(593)1121212" /> 
      <h:outputText value="Quienes somos" />
      
      

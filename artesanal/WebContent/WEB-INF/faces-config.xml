@@ -25,11 +25,16 @@
 		<managed-bean-scope>request</managed-bean-scope> 
 	</managed-bean> 
 	
+	 <managed-bean>
+		<managed-bean-name>DashboardView</managed-bean-name>
+		<managed-bean-class>main.java.controllers.DashboardView</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope> 
+	</managed-bean> 
+	
 	<managed-bean>
 		<managed-bean-name>markersView</managed-bean-name>
 		<managed-bean-class>org.primefaces.showcase.view.data.gmap.MarkersView</managed-bean-class>
-		<managed-bean-scope>request</managed-bean-scope> 
+		<managed-bean-scope>session</managed-bean-scope> 
 	</managed-bean>   
-    
-    
+     
 </faces-config>

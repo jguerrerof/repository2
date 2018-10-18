@@ -40,7 +40,7 @@ public final class SHA1BASE64 {
 		/*Esto hacen en una ejemplo*/
 		//byte raw[] = md.digest(); 
 		//String hash = (new BASE64Encoder()).encode(raw);//Traducción a BASE64
-		hashEjemplo1 = (new Base64()).encodeBase64String(digest);//Traducción a BASE64 //este bota 28 caracteres, pero con un problema \n\r, que me dan problemas porque no se ven...
+		//hashEjemplo1 = (new Base64()).encodeBase64String(digest);//Traducción a BASE64 //este bota 28 caracteres, pero con un problema \n\r, que me dan problemas porque no se ven...
 		
 		/*Esto hacen en otro ejemplo*/
 		for(byte aux : digest) {
