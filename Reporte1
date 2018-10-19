@@ -1,0 +1,17 @@
+SELECT 
+  pk_sucursal,
+  b.ciudad,
+    sum(venta) as venta
+FROM 
+  public.ventas a , public."Ciudad" b
+  where a.pk_ciudad = b.pk_ciudad
+  group by pk_sucursal,  b.ciudad
+  order by pk_sucursalSELECT 
+  pk_sucursal,
+  b.ciudad,
+    sum(venta) as venta
+FROM 
+  public.ventas a , public."Ciudad" b
+  where a.pk_ciudad = b.pk_ciudad
+  group by pk_sucursal,  b.ciudad
+  order by pk_sucursal
